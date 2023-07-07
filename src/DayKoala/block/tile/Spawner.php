@@ -29,7 +29,7 @@ use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\nbt\tag\IntTag;
 
 use pocketmine\data\bedrock\LegacyEntityIdToStringIdMap;
-
+use pocketmine\network\mcpe\convert\TypeConverter;
 use DayKoala\block\SpawnerBlock;
 
 abstract class Spawner extends Spawnable{
@@ -169,7 +169,7 @@ abstract class Spawner extends Spawnable{
         $nbt->setShort(self::TAG_REQUIRED_PLAYER_RANGE, $this->requiredPlayerRange);
     }
 
-    protected function addAdditionalSpawnData(CompoundTag $nbt) : Void{
+    protected function addAdditionalSpawnData(CompoundTag $nbt, TypeConverter $typeConverter) : Void{
         $nbt->setString(self::TAG_ENTITY_TYPE_ID, $this->entityTypeId);
     }
 
