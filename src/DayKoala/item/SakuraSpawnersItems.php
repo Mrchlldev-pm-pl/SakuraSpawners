@@ -49,7 +49,6 @@ final class SakuraSpawnersItems{
     public const TAG_MONSTER_SPAWNER_ENTITY_ID = 'SpawnerEntityId';
 
     public const MONSTER_SPAWNER_ID = BlockTypeNames::MOB_SPAWNER;
-    public const SPAWN_EGG_ID = ItemTypeNames::AXOLOTL_SPAWN_EGG;
 
     private static int $spawnerRuntimeId = 0;
     private static int $spawnEggRuntimeId = 0;
